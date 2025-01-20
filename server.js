@@ -64,7 +64,7 @@ let suppliers = [];
 //   console.error('Error stack:', err.stack);
 // });
 require('dotenv').config();
-mongoose.connect('process.env.MONGODB_URI',{ useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://ayush1777:agr11@cluster0.0128p.mongodb.net/FOILAR',{ useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.once('open', () => {
   console.log('Connected to MongoDB');
