@@ -25,7 +25,7 @@ const add = require('./Routes/Loans/add');
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({ origin: 'https://transaction-top.vercel.app' }));
 mongoose.set('debug', true);
 
 app.use('/api', signup);
