@@ -35,8 +35,7 @@ app.use('/api', connect);
 
 
 
-let customers = [];
-let suppliers = [];
+
 
 // Connect to MongoDB mongodb+srv://ad:a1y2u3@cluster0.y0axid7.mongodb.net
 // mongoose.connect('mongodb+srv://ad:a1y2u3@cluster0.y0axid7.mongodb.net/FOILAR?retryWrites=true&w=majority', {
@@ -48,12 +47,13 @@ let suppliers = [];
 //   console.error('MongoDB connection error:', err.message);
 //   console.error('Error stack:', err.stack);
 // });
-require('dotenv').config();
+
 mongoose.connect('mongodb+srv://ayush1777:agr11@cluster0.0128p.mongodb.net/FOILAR',{ useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.once('open', () => {
   console.log('Connected to MongoDB');
 });
+
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 app.use('/uploads', express.static('uploads'));
@@ -73,33 +73,33 @@ app.use('/uploads', express.static('uploads'));
 //   }
 // });
 
-app.post('/api/addSupplier', async (req, res) => {
-  try {
-    const supplier = new Supplier(req.body);
-    await supplier.save();
-    res.status(201).send(supplier);
-  } catch (error) {
-    res.status(400).send(error);
-  }
-});
+// app.post('/api/addSupplier', async (req, res) => {
+//   try {
+//     const supplier = new Supplier(req.body);
+//     await supplier.save();
+//     res.status(201).send(supplier);
+//   } catch (error) {
+//     res.status(400).send(error);
+//   }
+// });
 
-app.get('/api/customers', async (req, res) => {
-  try {
-    const customers = await Customer.find();
-    res.send(customers);
-  } catch (error) {
-    res.status(500).send(error);
-  }
-});
+// app.get('/api/customers', async (req, res) => {
+//   try {
+//     const customers = await Customer.find();
+//     res.send(customers);
+//   } catch (error) {
+//     res.status(500).send(error);
+//   }
+// });
 
-app.get('/api/suppliers', async (req, res) => {
-  try {
-    const suppliers = await Supplier.find();
-    res.send(suppliers);
-  } catch (error) {
-    res.status(500).send(error);
-  }
-});
+// app.get('/api/suppliers', async (req, res) => {
+//   try {
+//     const suppliers = await Supplier.find();
+//     res.send(suppliers);
+//   } catch (error) {
+//     res.status(500).send(error);
+//   }
+// });
 
 // app.get('/api/customer/:customerId', async (req, res) => {
 //   const { customerId } = req.params;
