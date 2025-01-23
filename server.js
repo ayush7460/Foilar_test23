@@ -1,9 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const mongoose = require('mongoose');
-const Customer = require('./models/Customer');
-const Supplier = require('./models/Supplier');
+
+
 const { v4: uuidv4 } = require('uuid');
 
 
