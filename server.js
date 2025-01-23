@@ -10,8 +10,8 @@ const { v4: uuidv4 } = require('uuid');
 
 
 
-const seebycustomer = require('./Routes/look_by_customer/see_by_customer')
-const connect = require('./Routes/look_by_customer/connect');
+// const seebycustomer = require('./Routes/look_by_customer/see_by_customer')
+// const connect = require('./Routes/look_by_customer/connect');
 
 const app = express();
 app.use(bodyParser.json());
@@ -28,8 +28,8 @@ app.use(cors({ origin: 'https://transaction-top.vercel.app' }));
 
 
 
-app.use('/api', seebycustomer);
-app.use('/api', connect);
+// app.use('/api', seebycustomer);
+// app.use('/api', connect);
 
 
 
