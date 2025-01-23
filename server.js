@@ -15,13 +15,13 @@ const connect = require('./Routes/look_by_customer/connect');
 
 const app = express();
 app.use(bodyParser.json());
-app.use(cors());
+
 app.use(cors({ origin: 'https://transaction-top.vercel.app' }));
-mongoose.set('debug', true);
 
 
 
-app.use('/api', s_detail);
+
+
 
 
 
