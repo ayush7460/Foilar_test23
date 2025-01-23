@@ -6,10 +6,6 @@ const Customer = require('./models/Customer');
 const Supplier = require('./models/Supplier');
 const { v4: uuidv4 } = require('uuid');
 
-const signup = require('./Routes/user_auth/signup');
-const login = require('./Routes/user_auth/login');
-const otp = require('./Routes/user_auth/otp');
-const profile = require('./Routes/user_auth/profile');
 
 const supplier = require('./Routes/supplier/supplier');
 const suppconnect = require('./Routes/supplier/supp-connect');
@@ -25,10 +21,7 @@ app.use(cors());
 app.use(cors({ origin: 'https://transaction-top.vercel.app' }));
 mongoose.set('debug', true);
 
-app.use('/api', signup);
-app.use('/api', login);  
-app.use('/api', otp);
-app.use('/api', profile);
+
 
 app.use('/api', s_detail);
 
