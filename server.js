@@ -7,11 +7,9 @@ const Supplier = require('./models/Supplier');
 const { v4: uuidv4 } = require('uuid');
 
 
-const supplier = require('./Routes/supplier/supplier');
-const suppconnect = require('./Routes/supplier/supp-connect');
 
 
-const s_detail = require('./Routes/supplier/S_detail');
+
 const seebycustomer = require('./Routes/look_by_customer/see_by_customer')
 const connect = require('./Routes/look_by_customer/connect');
 
@@ -28,8 +26,7 @@ app.use('/api', s_detail);
 
 
 
-app.use('/api', supplier);
-app.use('/api', suppconnect);
+
 
 app.use('/api', seebycustomer);
 app.use('/api', connect);
