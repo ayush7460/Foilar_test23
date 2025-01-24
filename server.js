@@ -27,9 +27,9 @@ const s_detail = require('./Routes/supplier/S_detail');
 // const connect = require('./Routes/look_by_customer/connect');
 
 
-const loanRoutes = require('./Routes/Loans/loanRoutes');
-const loanProfile = require('./Routes/Loans/loan-profile');
-const add = require('./Routes/Loans/add');
+// const loanRoutes = require('./Routes/Loans/loanRoutes');
+// const loanProfile = require('./Routes/Loans/loan-profile');
+// const add = require('./Routes/Loans/add');
 
 
 const app = express();
@@ -55,9 +55,9 @@ app.use('/api', suppconnect);
 // app.use('/api', seebycustomer);
 // app.use('/api', connect);
 
-app.use('/api', add);
-app.use('/api', loanRoutes);
-app.use('/api', loanProfile);
+// app.use('/api', add);
+// app.use('/api', loanRoutes);
+// app.use('/api', loanProfile);
 
 
 
