@@ -18,9 +18,9 @@ const mongoose = require('mongoose');
 // const c_detail = require('./Routes/customer/C_detail')
 
 
-const supplier = require('./Routes/supplier/supplier');
-const suppconnect = require('./Routes/supplier/supp-connect');
-const s_detail = require('./Routes/supplier/S_detail');
+// const supplier = require('./Routes/supplier/supplier');
+// const suppconnect = require('./Routes/supplier/supp-connect');
+// const s_detail = require('./Routes/supplier/S_detail');
 
 
 // const seebycustomer = require('./Routes/look_by_customer/see_by_customer')
@@ -48,9 +48,9 @@ mongoose.set('debug', true);
 // app.use('/api', transactions);
 // app.use('/api', chat);
 
-app.use('/api', s_detail);
-app.use('/api', supplier);
-app.use('/api', suppconnect);
+// app.use('/api', s_detail);
+// app.use('/api', supplier);
+// app.use('/api', suppconnect);
 
 // app.use('/api', seebycustomer);
 // app.use('/api', connect);
