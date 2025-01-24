@@ -21,7 +21,7 @@ router.post('/send-otp', async (req, res) => {
   if (!mobileNumber) {
     return res.status(400).json({ message: 'Phone number is required' });
   }
-  console.log('API Key:', FAST2SMS_API_KEY);
+
 
   const otp = Math.floor(100000 + Math.random() * 900000); // Generate a 6-digit OTP
   otpStore[mobileNumber] = otp; // Store OTP temporarily
