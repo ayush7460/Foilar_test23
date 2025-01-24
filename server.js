@@ -43,10 +43,10 @@ mongoose.set('debug', true);
 // app.use('/api', otp);
 // app.use('/api', profile);
 
-app.use('/api', c_detail);
-app.use('/api', customer);
-app.use('/api', transactions);
-app.use('/api', chat);
+// app.use('/api', c_detail);
+// app.use('/api', customer);
+// app.use('/api', transactions);
+// app.use('/api', chat);
 
 app.use('/api', s_detail);
 app.use('/api', supplier);
