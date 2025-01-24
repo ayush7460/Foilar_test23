@@ -6,7 +6,7 @@ require('dotenv').config();
 
 const User = require('../../models/user');
 const jwt = require('jsonwebtoken');
-const jwtSecret = process.env.JWT_SECRET || 'anykey';
+const jwtSecret = 'anykey';
 
 
 const FAST2SMS_API_KEY = "rXWbJda2A3hn507E9CTUBPZq8LNemHtsYfgDc164GRFjwyOpQuKarWg7vMIA3fRtFPYZysh1UweXJNmS" ;

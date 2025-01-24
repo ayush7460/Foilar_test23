@@ -3,7 +3,7 @@ const router = express.Router();
 const User = require('../../models/user'); // Assuming your User model is defined in this file
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const jwtSecret = process.env.JWT_SECRET || 'anykey';
+const jwtSecret = 'anykey';
 
 router.post('/login', async (req, res) => {
     try {
