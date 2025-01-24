@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-// const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 // const Customer = require('./models/Customer');
 // const Supplier = require('./models/Supplier');
 // const { v4: uuidv4 } = require('uuid');
@@ -79,14 +79,14 @@ app.use('/api', loanProfile);
 //   console.error('Error stack:', err.stack);
 // });
 
-// mongoose.connect('mongodb+srv://ayush1777:agr11@cluster0.0128p.mongodb.net/FOILAR', { useNewUrlParser: true,  });
-// const db = mongoose.connection;
-// db.once('open', () => {
-//   console.log('Connected to MongoDB');
-// });
-// db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+mongoose.connect('mongodb+srv://ayush1777:agr11@cluster0.0128p.mongodb.net/FOILAR', { useNewUrlParser: true,  });
+const db = mongoose.connection;
+db.once('open', () => {
+  console.log('Connected to MongoDB');
+});
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-// app.use('/uploads', express.static('uploads'));
+app.use('/uploads', express.static('uploads'));
 
 
 // API endpoints
