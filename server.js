@@ -24,7 +24,7 @@ const loanProfile = require('./Routes/Loans/loan-profile');
 const add = require('./Routes/Loans/add');
 const app = express();
 app.use(bodyParser.json());
-app.use(cors());
+// app.use(cors());
 app.use(cors({ origin: 'http://localhost:3000' }));
 mongoose.set('debug', true);
 
@@ -50,8 +50,8 @@ app.use('/api', loanProfile);
 
 
 
-let customers = [];
-let suppliers = [];
+// let customers = [];
+// let suppliers = [];
 
 // Connect to MongoDB mongodb+srv://ad:a1y2u3@cluster0.y0axid7.mongodb.net
 // mongoose.connect('mongodb+srv://ad:a1y2u3@cluster0.y0axid7.mongodb.net/FOILAR?retryWrites=true&w=majority', {
