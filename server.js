@@ -4,12 +4,12 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 // const Customer = require('./models/Customer');
 // const Supplier = require('./models/Supplier');
-const { v4: uuidv4 } = require('uuid');
+// const { v4: uuidv4 } = require('uuid');
 
-const signup = require('./Routes/user_auth/signup');
-const login = require('./Routes/user_auth/login');
-const otp = require('./Routes/user_auth/otp');
-const profile = require('./Routes/user_auth/profile');
+// const signup = require('./Routes/user_auth/signup');
+// const login = require('./Routes/user_auth/login');
+// const otp = require('./Routes/user_auth/otp');
+// const profile = require('./Routes/user_auth/profile');
 
 
 const customer = require('./Routes/customer/customer');
@@ -38,10 +38,10 @@ app.use(bodyParser.json());
 app.use(cors({ origin: 'http://localhost:3000' }));
 mongoose.set('debug', true);
 
-app.use('/api', signup);
-app.use('/api', login);  
-app.use('/api', otp);
-app.use('/api', profile);
+// app.use('/api', signup);
+// app.use('/api', login);  
+// app.use('/api', otp);
+// app.use('/api', profile);
 
 app.use('/api', c_detail);
 app.use('/api', customer);
