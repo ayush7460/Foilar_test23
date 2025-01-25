@@ -10,7 +10,7 @@ const mongoose = require('mongoose');
 const mongoURI = process.env.MONGODB_URI || "mongodb+srv://ayush1777:agr11@cluster0.0128p.mongodb.net/FOILAR";
 
 mongoose
-  .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(mongoURI, { useNewUrlParser: true })
   .then(() => console.log('Connected to MongoDB using Mongoose 8.2.1'))
   .catch((err) => console.error('Connection error:', err));const db = mongoose.connection;
 db.once('open', () => {
