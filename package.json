@@ -1,4 +1,6 @@
-{
+{  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "agenda": "^5.0.0",
     "axios": "^1.7.8",
@@ -18,15 +20,6 @@
     "path": "^0.12.7",
     "router": "^2.0.0",
     "socket.io": "^4.8.1"
-  },
-  "scripts": {
-    "start": "node server.js"
-  },
-  "name": "foilar",
-  "version": "1.0.0",
-  "main": "server.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  }
+
 }
