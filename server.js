@@ -17,6 +17,9 @@ const chat = require('./Routes/customer/chat');
 const seebycustomer = require('./Routes/look_by_customer/see_by_customer')
 const connect = require('./Routes/look_by_customer/connect');
 
+const loanRoutes = require('./Routes/Loans/loanRoutes');
+const loanProfile = require('./Routes/Loans/loan-profile');
+const add = require('./Routes/Loans/add');
 
 app.use('/api', signup);
 app.use('/api', login);  
@@ -30,6 +33,10 @@ app.use('/api', chat);
 
 app.use('/api', seebycustomer);
 app.use('/api', connect);
+
+app.use('/api', add);
+app.use('/api', loanRoutes);
+app.use('/api', loanProfile);
 
 // Middleware
 
