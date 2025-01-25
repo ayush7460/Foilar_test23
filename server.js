@@ -39,26 +39,26 @@ app.use(bodyParser.json());
 app.use(cors({ origin: 'http://localhost:3000' }));
 
 
-app.use('/api', signup);
-app.use('/api', login);  
-app.use('/api', otp);
-app.use('/api', profile);
+// app.use('/api', signup);
+// app.use('/api', login);  
+// app.use('/api', otp);
+// app.use('/api', profile);
 
-app.use('/api', c_detail);
-app.use('/api', customer);
-app.use('/api', transactions);
-app.use('/api', chat);
+// app.use('/api', c_detail);
+// app.use('/api', customer);
+// app.use('/api', transactions);
+// app.use('/api', chat);
 
-app.use('/api', s_detail);
-app.use('/api', supplier);
-app.use('/api', suppconnect);
+// app.use('/api', s_detail);
+// app.use('/api', supplier);
+// app.use('/api', suppconnect);
 
-app.use('/api', seebycustomer);
-app.use('/api', connect);
+// app.use('/api', seebycustomer);
+// app.use('/api', connect);
 
-app.use('/api', add);
-app.use('/api', loanRoutes);
-app.use('/api', loanProfile);
+// app.use('/api', add);
+// app.use('/api', loanRoutes);
+// app.use('/api', loanProfile);
 
 
 
