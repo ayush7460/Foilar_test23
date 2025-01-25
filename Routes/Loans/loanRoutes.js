@@ -11,6 +11,7 @@ router.use('/uploads', express.static('uploads'));
 // router.use('/uploads', express.static(path.join(__dirname, '../../uploads')));
 
 
+
 // Create uploads directory if it doesn't exist
 const uploadDirectory = './uploads/';
 if (!fs.existsSync(uploadDirectory)) {
