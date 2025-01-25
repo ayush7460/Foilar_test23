@@ -11,13 +11,10 @@ const mongoose = require('mongoose');
 const mongoURI = process.env.MONGODB_URI;
 
 
-mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
-const db = mongoose.connection;
-db.once('open', () => {
-  console.log('Connected to MongoDB');
-});
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-
+mongoose
+  .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('Connected to MongoDB'))
+  .catch((err) => console.error('MongoDB connection error:', err));
 // app.use('/uploads', express.static('uploads'));
 
 app.use(express.json());
