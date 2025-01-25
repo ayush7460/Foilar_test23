@@ -9,10 +9,21 @@ const login = require('./Routes/user_auth/login');
 const otp = require('./Routes/user_auth/otp');
 const profile = require('./Routes/user_auth/profile');
 
+const c_detail = require('./Routes/customer/C_detail')
+const customer = require('./Routes/customer/customer');
+const transactions = require('./Routes/customer/transaction');
+const chat = require('./Routes/customer/chat');
+
+
 app.use('/api', signup);
 app.use('/api', login);  
 app.use('/api', otp);
 app.use('/api', profile);
+
+app.use('/api', c_detail);
+app.use('/api', customer);
+app.use('/api', transactions);
+app.use('/api', chat);
 
 // Middleware
 
