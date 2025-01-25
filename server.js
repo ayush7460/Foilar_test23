@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 
 
 // Middleware
@@ -10,11 +10,11 @@ const mongoose = require('mongoose');
 
 
 
-mongoose
-  .connect('mongodb+srv://ayush1777:agr11@cluster0.0128p.mongodb.net/FOILAR', { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('Connected to MongoDB'))
-  .catch((err) => console.error('MongoDB connection error:', err));
-app.use('/uploads', express.static('uploads'));
+// mongoose
+//   .connect('mongodb+srv://ayush1777:agr11@cluster0.0128p.mongodb.net/FOILAR', { useNewUrlParser: true, useUnifiedTopology: true })
+//   .then(() => console.log('Connected to MongoDB'))
+//   .catch((err) => console.error('MongoDB connection error:', err));
+// app.use('/uploads', express.static('uploads'));
 
 app.use(express.json());
 // Routes
