@@ -62,12 +62,12 @@ app.use(cors({ origin: 'http://localhost:3000' }));
 
 
 
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true,  });
-const db = mongoose.connection;
-db.once('open', () => {
-  console.log('Connected to MongoDB');
-});
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+// mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true,  });
+// const db = mongoose.connection;
+// db.once('open', () => {
+//   console.log('Connected to MongoDB');
+// });
+// db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 app.use('/uploads', express.static('uploads'));
 
