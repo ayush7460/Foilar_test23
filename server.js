@@ -4,6 +4,15 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const mongoose = require('mongoose');
 
+const signup = require('./Routes/user_auth/signup');
+const login = require('./Routes/user_auth/login');
+const otp = require('./Routes/user_auth/otp');
+const profile = require('./Routes/user_auth/profile');
+
+app.use('/api', signup);
+app.use('/api', login);  
+app.use('/api', otp);
+app.use('/api', profile);
 
 // Middleware
 
@@ -17,11 +26,9 @@ db.once('open', () => {
   console.log('Connected to MongoDB');
 });
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-// mongoose
-//   .connect('mongodb+srv://ayush1777:agr11@cluster0.0128p.mongodb.net/FOILAR', { useNewUrlParser: true, useUnifiedTopology: true })
-//   .then(() => console.log('Connected to MongoDB'))
-//   .catch((err) => console.error('MongoDB connection error:', err));
-// app.use('/uploads', express.static('uploads'));
+
+
+
 
 app.use(express.json());
 // Routes
