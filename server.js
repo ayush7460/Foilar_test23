@@ -14,6 +14,9 @@ const customer = require('./Routes/customer/customer');
 const transactions = require('./Routes/customer/transaction');
 const chat = require('./Routes/customer/chat');
 
+const seebycustomer = require('./Routes/look_by_customer/see_by_customer')
+const connect = require('./Routes/look_by_customer/connect');
+
 
 app.use('/api', signup);
 app.use('/api', login);  
@@ -24,6 +27,9 @@ app.use('/api', c_detail);
 app.use('/api', customer);
 app.use('/api', transactions);
 app.use('/api', chat);
+
+app.use('/api', seebycustomer);
+app.use('/api', connect);
 
 // Middleware
 
