@@ -8,7 +8,6 @@ const mongoose = require('mongoose');
 // Middleware
 
 
-const mongoURI = process.env.MONGODB_URI;
 
 
 mongoose
