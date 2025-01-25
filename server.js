@@ -69,7 +69,7 @@ app.use(cors({ origin: 'http://localhost:3000' }));
 // });
 // db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-app.use('/uploads', express.static('uploads'));
+// app.use('/uploads', express.static('uploads'));
 
 
 const port = 5000;
